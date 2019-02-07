@@ -19,8 +19,8 @@ export default {
   data: () => ({
     k1xp: 250,
     k1yp: 110,
-    k1vx: 3,
-    k1vy: 3,
+    k1vx: 1,
+    k1vy: 1,
     started: false,
     gravity: false,
     av: 0
@@ -28,13 +28,13 @@ export default {
   methods: {
     start() {
       this.started=true
-      interval=setInterval(this.mozog ,30)
+      interval=setInterval(this.step ,1)
     },
     stop() {
       this.started=false
       clearInterval(interval)
     },
-    mozog() {
+    step() {
       this.k1xp+=this.k1vx
       this.k1yp+=this.k1vy
       if (this.k1xp>980) this.k1vx = -this.k1vx
