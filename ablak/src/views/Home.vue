@@ -6,7 +6,7 @@
     <button @click="gravity=!gravity">Gravity</button> - 
     <input type="range" min=-10 max=10 v-model="av"> {{av}}
     <svg viewBox="0 0 1000 700">
-      <circle :cx="k1xp" :cy="k1yp" r="20"/>
+      <circle :cx="k1xp" :cy="k1yp" r="5"/>
     </svg>
     {{k1vx}}
   </div>
